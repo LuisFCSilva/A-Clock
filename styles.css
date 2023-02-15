@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url(img/clock_face.jpg);
+}
+
+.clock::after {
+    position: absolute;
+    content: '';
+    background-color: #000;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+}
+
+.hands {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
